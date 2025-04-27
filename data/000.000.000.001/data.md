@@ -1,0 +1,10 @@
+000.000.000.001$d
+>doc$d
+>>hello.txt
+>data$d
+>>metaverse.mt
+>bin$d
+>sys$d
+>>bootcfg.dll
+>>netcfgx.dll
+>>os-config.sys

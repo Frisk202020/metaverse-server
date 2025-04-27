@@ -1,0 +1,54 @@
+/* COMMON STYLE */
+@font-face {
+    font-family: DynaPuff;
+    src: url(assets/fonts/DynaPuff/DynaPuff-Regular.ttf);
+}
+@font-face {
+    font-family: GBS;
+    src: url(assets/fonts/GBS/PlaywriteGBS-Regular.ttf);
+}
+
+body{
+    margin-left:0px;
+    margin-right:0px;
+    font-family: DynaPuff, arial;
+    background-image: url(assets/bg/bg.png);
+    background-repeat: no-repeat;
+    background-size: cover; /* take the entire space of the bg */
+    background-attachment:fixed;
+    background-position: center;
+}
+.viewport{
+    display: flex;
+    justify-content: center;
+}
+
+
+/* NAV BAR */
+nav{
+    position:fixed;
+    bottom:0px;
+}
+nav ul{
+    list-style-type: none; /* removes the dots before list element */
+    background-color: hsl(249, 93%, 11%);
+    padding: 0px;
+    margin: 0px;
+    overflow:hidden; /* So the content after the navbar doesn't overflow */
+    border-radius: 20px;
+    
+}
+nav a{
+    color:white;
+    text-decoration: none;
+    display:block;
+    text-align: center;
+    padding:15px;
+}
+nav li{
+    width:40vw;
+    float:left;
+}
+nav li:hover{
+    background-color: hsl(249, 91%, 26%);
+}

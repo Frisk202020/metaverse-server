@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="icon" type="image/png" href="/get/341.721.107.002/clovernet/assets/favicon.png">
+        <link rel="stylesheet" href="/get/341.721.107.002/clovernet/style.css">
+        <title>CloverNet Private ChatRoom</title>
+    </head>
+
+    <body>
+        <div class="background-size">
+            <div class="catBox" id="catBox">
+                <img src="/get/341.721.107.002/clovernet/assets/cat.png" class="activeCat" id="cat" onclick="debug()"> <!-- Should be boxAppear() -->
+            </div>
+            <div class="viewport">
+                <div class="flexText" id="us">
+                    <h2>Who are we ?</h2>
+                    <p>I'm Clover SPYRROW, chief of an investigation team of the Government that aims to destroy the UNDERDOGS from the inside.</p>
+
+                    <p>In order to infiltrate, we need to gather all the information we can on their organization, and we're collecting every illegal IP in order to map the metaverse. 
+                    <b>That's when you can help us</b>. <u>If you have any information that could be useful for us, please head to the report center section !</u></p>
+                </div>
+            </div>
+            <br>
+            <div class="viewport">
+                <div class="inactiveText" id="other">
+                    <h2>The spying department</h2>
+                    <p>The department is divided in three subsections that are each specialized on a peculiar task</p>
+                    <ul>
+                        <li><u>Infiltration section</u> : people specialized in undercover missions</li>
+                        <li><u>Data collection section</u> : people specialized at retrieving confidential information from UNDERDOGS</li>
+                        <li><u>Engineering section</u> : people that develop minimalist tools utilized by other sections. For difficult tasks, we may ask to the coding department</li>
+                    </ul>
+                </div>
+                <div class="inactiveText" id="other2">
+                    <h2>My team</h2>
+                    <p>My team belongs to the data collection section, we collect all the data we find about UNDERDOGS, that we retrieve using different strategies : </p>
+                    <ul>
+                        <li><u>Interception</u> : we can retrieve messages sent between UNDERDOGS that are poorly secured</li>
+                        <li><u>Searching</u> : we look at every terminal found by us or the surveillance department, and we exploit all the data and terminal links we find to expand our map of UNDERDOGS</li>
+                        <li><u>Infiltration assistance</u> : we help undercover agents by providing useful information about the situation they're put into</li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="centerNavbar">
+                <nav>
+                    <ul>
+                        <li><a href="/get/341.721.107.002/clovernet/index.html" id="home">Home</a></li>
+                        <li><a href="/get/341.721.107.002/clovernet/report.html" id="report">Report Center</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+        <style>
+            @keyframes appearFromSide {
+                0%{opacity: 0; transform: translateX(-200px);}
+                100%{opacity: 1; transform: translateX(0px);}
+            }
+            @keyframes disappear {
+                0%{transform: scale(1);}
+                33%{transform: scale(1.5);}
+                100%{transform: scale(0);}
+            }
+            @keyframes appear {
+                0%{transform: scale(0);}
+                100%{transform: scale(1); opacity: 1;}
+            }
+            body{
+                background-attachment:local;
+                background-position: initial;
+            }
+            .centerNavbar{
+                display: flex;
+                justify-content: center;
+                width: 100vw;
+            }
+            .background-size{
+                width: 1600px;
+                height: 900px;
+                overflow:hidden;
+            }
+            .catBox{
+                float:left;
+                left: 300px;
+                top: 675px;
+
+                position:absolute;
+            }
+            .activeCat{
+                float:left;
+                width:100px;
+                height:100px;
+                cursor: pointer;
+            }
+            .inactiveCat{
+                float:left;
+                width:100px;
+                height:100px;
+                cursor: pointer;
+                animation: disappear 3s forwards;
+            }
+            .activeText{
+                animation: appear 2s forwards;
+                margin-top: 3vh;
+                border : 10px solid;
+                background-color: hsla(208, 100%, 97%, 90%);
+                font-size: 1.2em;
+                padding: 1em;
+            }
+
+            .flexText{
+                margin-top: 3vh;
+                border : 10px solid;
+                background-color: hsla(208, 100%, 97%, 90%);
+                font-size: 1.2em;
+                padding: 1em;
+            }
+            #us{
+                width: 90vw;
+            }
+            #other{
+                opacity: 0;
+                width: 40vw;
+                margin-right: 2.5vw;
+            }
+            #other2{
+                opacity: 0;
+                width: 40vw;
+                margin-left: 2.5vw;
+                margin-right: 5vw;
+            }
+            .flexText h2{
+                opacity: 0;
+                animation: appearFromSide 3s forwards;
+            }
+
+            .flexText p {
+                opacity: 0;
+                animation: appearFromSide 3s 1s forwards;
+            }
+            nav #home{
+                border-right:1px solid white;
+            }
+        </style>
+
+        <script src="/get/341.721.107.002/clovernet/js/about.js"></script>
+    </body>
+</html>

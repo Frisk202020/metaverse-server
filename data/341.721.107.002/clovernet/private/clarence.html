@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="icon" type="image/png" href="/get/341.721.107.002/clovernet/assets/favicon.png">
+        <link rel="stylesheet" href="/get/341.721.107.002/clovernet/style.css">
+        <title>Clarence's workspace</title>
+    </head>
+    <body>
+        <div class="viewport">
+            <h1 align="center">Clarence's Workspace (Rank: <span style="color:rgb(208, 19, 19);">Veteran</span>)</h1>
+        </div>
+        
+        <h3>Discussions</h3>
+        <h4 id="general">#General<span id="generalIndicator">+</span></h4>
+        <h4 id="CloverInbox">#Clover-inbox<span id="CloverIndicator">+</span></h4>
+        <h4 id="TeamInbox">#Team-inbox<span id="TeamIndicator">+</span></h4>
+        <h4>#Organization<span>+</span></h4>
+        <h4>#Wanted-people<span>+</span></h4>
+
+        <h3>Vocal Rooms</h3>
+        <h4>Room 1</h4>
+        <h4>Room 2</h4>
+        <h4>Room 3</h4>
+        <h4>Veteran's Room</h4>
+        <div id="container" class="init">
+            <div id="logBox" class="logBox"></div>
+            <input id="sendMessage" class="send" placeholder="message">
+            <div class="imgBox"><img id="sendIcon" src="/get/341.721.107.002/clovernet/assets/sendIcon.png" onmouseover="hover()" onmouseout="unhover()"></div>
+        </div>
+        
+
+        <div class="viewport">
+            <button id="btn">Return to Home Page</button>
+        </div>
+
+        <style>
+            @keyframes positionLogBox {
+                to{transform: translateY(-70vh);}
+            }
+            @keyframes positionSend {
+                to{transform: translateY(-70vh);}
+            }
+            @keyframes appear {
+                from{transform: translateX(50vw);}
+            }
+            @keyframes disappear {
+                to{transform: translateX(50vw);}
+            }
+            .forbid + .imgBox{
+                opacity: 0;
+            }
+            .forbid::placeholder{
+                color:red;
+            }
+            .forbid:hover{
+                cursor: not-allowed;
+            }
+            .init{
+                transform: translateX(50vw);
+            }
+            .inactive{
+                animation: disappear 1s forwards;
+            }
+            .active{
+                animation: appear 1s forwards;
+            }
+            #general:hover, #CloverInbox:hover, #TeamInbox:hover{
+                cursor: pointer;
+            }
+            #sendIcon:hover{
+                cursor: pointer;
+            }
+            .imgBox{
+                transform: translate(39vw, -75vh);
+                margin-right: 1vw;
+                width: 1em;
+            }
+            .date{
+                font-size: 0.8em;
+            }
+            #host{
+                display: flex;
+                justify-content: right;
+                margin-right: 1em;
+            }
+            #host .message{
+                background-color: hsla(153, 84%, 54%, 0.7);
+            }
+            .chief{
+                color: purple;
+            }
+            .veteran{
+                color: red;
+            }
+            .rookie{
+                color: goldenrod;
+            }
+            img{
+                display: inline;
+            }
+            .message{
+                margin-left: 1em;
+                width: 30vw;
+                padding: 10px;
+                margin-top: 1em;
+                margin-bottom: 1em;
+                border-radius: 10px;
+                background-color: hsla(208, 100%, 97%, 70%);
+            }
+            .send{
+                border-radius: 10px;
+                margin-right: 2vw;
+                width: 40vw;
+                font-size: 20px;
+                padding: 10px;
+                border: 3px solid;
+                animation: positionSend forwards;
+                font-family: DynaPuff, arial;
+            }
+            #container{
+                float: right;
+            }
+            .logBox{
+                border-radius: 10px;
+                background-color: hsla(208, 100%, 97%, 40%);               
+                width: 40vw;
+                height: 50vh;
+                border: 5px solid;          
+                animation: positionLogBox 0s forwards;
+                overflow: scroll;
+                margin-bottom: 5vh;
+            }
+            button{
+                width: 40vw;
+                height: 2em;
+                background-color: hsl(249, 91%, 26%, 100%);
+                font-family: DynaPuff, arial;
+                font-size: 30px;
+                padding: 10px;
+                border: 2px solid;
+                box-shadow: 2px 2px 2px;
+                border-radius: 10px;
+                margin-top: 2.5vh;
+            }
+            button:hover{
+                cursor: pointer;
+                background-color: hsl(249, 90%, 37%);
+            }
+            h1{
+                padding: 10px;
+                border-radius: 10px;
+                width: 80vw;
+                background-color: hsla(208, 100%, 97%, 70%);
+            }
+            h3{
+                width: 50vw;
+                border-radius: 10px;
+                padding: 10px;
+                margin-left: 2vw;
+                background-color: hsla(208, 100%, 97%, 90%);
+            }
+            h4 span{
+                float: inline-end;
+            }
+            h4{
+                width: 50vw;
+                border-radius: 10px;
+                padding: 10px;
+                margin-left: 5vw;
+                background-color: hsla(208, 100%, 97%, 70%);
+            }
+            body{
+              overflow: hidden;
+            }
+        </style>
+        <script src="/get/341.721.107.002/clovernet/js/message.js"></script>
+        <script src="/get/341.721.107.002/clovernet/js/channels.js"></script>
+        <script>
+            const BTN = document.getElementById("btn");
+            BTN.onclick = function(){
+                location.href = "/get/341.721.107.002/clovernet/index.html";
+            }
+        </script>
+    </body>
+</html>

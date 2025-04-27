@@ -1,0 +1,15 @@
+Home$d
+>doc$d
+>>Chara.txt
+>>1.pdf
+>img$d
+>>gargouille.png
+>html$d
+>>data.mt
+>>H0PE_mail.html
+>sys$d
+>>dark.sys$c:dark
+>>light.sys$c:light
+>>bootcfg.dll
+>>netcfgx.dll
+>>os-config.sys

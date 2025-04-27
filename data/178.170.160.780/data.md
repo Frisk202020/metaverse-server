@@ -1,0 +1,14 @@
+178.170.160.780$d
+>bin$d
+>data$d:clover_dont_kill_us
+>>metaverse.mt
+>doc$d
+>>estelle_workspace$d
+>>hanck_workspace$d
+>>>hitchmann_only$d
+>>>>Im_serious_dont_go_there$d
+>>>>>password.ps
+>sys$d
+>>bootcfg.dll
+>>netcfgx.dll
+>>os-config.sys

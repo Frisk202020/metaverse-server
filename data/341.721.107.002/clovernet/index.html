@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="icon" type="image/png" href="/get/341.721.107.002/clovernet/assets/favicon.png">
+        <title>CloverNet</title>
+        <link rel="stylesheet" href="/get/341.721.107.002/clovernet/style.css">
+    </head>
+    <body>
+        <div class="viewport">
+            <p id="l1" class="letter">C</p>
+            <p id="l2" class="letter">l</p>
+            <p id="l3" class="letter">o</p>
+            <p id="l4" class="letter">v</p>
+            <p id="l5" class="letter">e</p>
+            <p id="l6" class="letter">r</p>
+            <p id="l7" class="letter">N</p>
+            <p id="l8" class="letter">e</p>
+            <p id="l9" class="letter">t</p>
+        </div>
+        <div class="box" id="iconBox">
+            <img src="/get/341.721.107.002/clovernet/assets/favicon.png" height="10" width="10" id="moon">
+        </div>
+        <nav>
+            <ul>
+                <li><a href="/get/341.721.107.002/clovernet/about.html" id="about">About</a></li>
+                <li><a href="/get/341.721.107.002/clovernet/report.html" id="report">Report Center</a></li>
+            </ul>
+        </nav>
+        <style>
+            /* INTRO ANIMATION */
+            .viewport .letter{
+                opacity: 0;
+                font-size: 80px;
+                font-weight: bold;
+                margin:10px;
+                animation: shadowAppear 1s 3.6s;
+            }
+            .viewport #l1{
+                animation: fallLetter 1s 1s forwards, shadowAppear 2s 3.6s infinite;
+            }
+            .viewport #l2{
+                animation: fallLetter 1s 1.2s forwards, shadowAppear 2s 3.6s infinite;
+            }
+            .viewport #l3{
+                animation: fallLetter 1s 1.4s forwards, shadowAppear 2s 3.6s infinite;
+            }
+            .viewport #l4{
+                animation: fallLetter 1s 1.6s forwards, shadowAppear 2s 3.6s infinite;
+            }
+            .viewport #l5{
+                animation: fallLetter 1s 1.8s forwards, shadowAppear 2s 3.6s infinite;
+            }
+            .viewport #l6{
+                animation: fallLetter 1s 2s forwards, shadowAppear 2s 3.6s infinite;
+            }
+            .viewport #l7{
+                animation: fallLetter 1s 2.2s forwards, shadowAppear 2s 3.6s infinite;
+            }
+            .viewport #l8{
+                animation: fallLetter 1s 2.4s forwards, shadowAppear 2s 3.6s infinite;
+            }
+            .viewport #l9{
+                animation: fallLetter 1s 2.6s forwards, shadowAppear 2s 3.6s infinite;
+            }
+            .box{
+                float:left;
+                transform: translate(50vw, 20vh);
+            }
+            #moon{
+                position: fixed;
+                opacity: 0;
+                animation: appear 1s forwards;
+            }
+            @keyframes appear {
+                100%{transform: scale(30.0, 30.0); opacity: 1;}
+            }
+            @keyframes fallLetter{
+                0%{transform: translateY(-10vh); opacity:1;}
+                70%{transform: translateY(4vh); opacity:1;}
+                100%{transform: translateY(2vh); opacity:1;}
+            }
+            @keyframes shadowAppear {
+                50%{text-shadow: 2px 2px 5px gold;}
+            }
+
+            nav #about{
+                border-right:1px solid white;
+            }
+        </style>
+
+        <script src="/get/341.721.107.002/clovernet/js/index.js"></script>
+    </body>
+</html>

@@ -1,0 +1,4 @@
+(Should read data from this file is the future instead of having data inside file)
+
+id=1;user=Clover;message=How Are you Clarence?;
+id=2;user=Clarence;message=I'm a bit exhausted with the mission preparation !;

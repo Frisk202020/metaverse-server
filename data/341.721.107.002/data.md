@@ -1,0 +1,16 @@
+341.721.107.002$d
+>doc$d
+>>notes.txt
+>bin$d
+>log$d
+>data$d
+>>room.mt
+>CloverNet$d
+>>app$d
+>>>app.exe
+>>CloverNet.html
+>sys$d
+>>bootcfg.dll
+>>netcfgx.dll
+>>os-config.sys
+>>chocolate.sys$c:chocolate

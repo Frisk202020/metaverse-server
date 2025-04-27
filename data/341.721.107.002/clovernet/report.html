@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="icon" type="image/png" href="assets/public_favicon.png">
+        <link rel="stylesheet" href="style.css">
+        <title>CloverNet Report Center</title>   
+    </head>
+    <body>
+        <div class=title id="viewport">
+            <h1 align=center id="title">Report Center</h1>
+        </div>
+        <div class="viewport">
+            <div class="flexText" id="left">
+                <h2><u>Information about yourself</u></h2>
+                <form action="javascript:thanksL()">
+                    <label for="name">Please put your full name : </label> 
+                    <input type="text" id="name" placeholder="Clover SPYRROW" class="box" required><br><br>
+                    <label for="email">Please put a valid email address : </label>
+                    <input type="email" id="email" placeholder="example@mailbox.com" class="box" required><br><br>
+                    <label for="phone">Please put a valid phone number : </label>
+                    <input type="phone"id="phone" placeholder="0X XX XX XX" pattern="[0]{1}[0-9]{1} [0-9]{2} [0-9]{2} [0-9]{2} [0-9]{2}" class="box" required><br><br>
+                    <label for="member">Are you a member of the Government's organization ? </label>
+                    <label for="Yes" id="checkBox">Yes</label>
+                    <input type="radio" id="Yes" name="member" class="box">
+                    <label for="No" id="checkBox">No</label>
+                    <input type="radio" id="No" name="member" class="box">
+                    <br><br>
+                    <div class="viewport" id="containerL">
+                        <input type="submit" class="box" id="submitButtonL">
+                    </div>
+                </form>
+            </div>
+            <div class="flexText" id="right">
+                <h2><u>Information about caught UNDERDOGS</u></h2>
+                <form action="javascript:thanksR()">
+                    <label for="info">Write everything you know about potential UNDERGOGS : </label>
+                    <textarea id="info" placeholder="name, age, address..." rows="5" cols="50" class="box"></textarea>
+                    <br><br>
+                    <label for="ip">Write every metaverse IP address you found : </label>
+                    <textarea id="ip" placeholder="XXX.XXX.XXX.XXX" rows="5" cols="50" class="box"></textarea>
+                    <br><br>
+                    <div class="viewport" id="containerR">
+                        <input type="submit" class="box" id="submitButtonR">
+                    </div>
+                </form>
+            </div>
+        </div>
+        
+        <div class="viewport">
+            <div class="flexText" id="why">
+                <h2><u>Why do we need data about yourself ?</u></h2>
+                <ul>
+                    <li>We need to ensure that you are a trustworthy informer</li>
+                    <li>We need to be able to contact you later if we need precisions about you information</li>
+                    <li>We may recruit you in our department if you're providing many useful information to us</li>
+                </ul>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="about.html" id="about">About</a></li>
+                    <li><a href="index.html" id="home">Home</a></li>
+                </ul>
+            </nav>
+        </div>
+
+        <style>
+            @font-face {
+                font-family: DynaPuff;
+                src: url(assets/fonts/DynaPuff/DynaPuff-Regular.ttf);
+            }
+
+            /* PAGE TITLE */
+            @keyframes comeFromTop{
+                from{transform: translateY(-350px);}
+            }
+            @keyframes bgAppear{
+                to{background-color: hsla(199, 100%, 89%, 0.415);}
+            }
+            @keyframes comeFromLeft {
+                0%{transform: translateX(-100vw);}
+                100%{opacity: 1;}
+            }
+            @keyframes comeFromRight {
+                0%{transform: translateX(100vw);}
+                100%{opacity: 1;}
+            }
+            @keyframes comeFromBottom {
+                0%{transform: translateY(30vh);}
+                100%{opacity: 1;}
+            }
+            @keyframes textShadow {
+                0%{text-shadow:none;}
+                50%{text-shadow: 3px 2px 5px gold;} 
+                100%{text-shadow:none;}
+            }
+            .title{
+                animation: comeFromTop 2s forwards;
+                display: flex;
+                justify-content: center;
+            }
+            h1{
+                font-size: 60px;
+                width: 80vw;
+                margin: 20px;
+                border-radius: 10px;
+                background: none;
+                animation: bgAppear 1s 2s forwards, textShadow 5s 9s infinite;
+            }
+            /* FORM */
+            .box{
+                box-shadow: 3px 3px 5px;
+            }
+            .profile{
+                float: left;
+                margin-right: 25px;
+            }
+            /* FORM BOX */
+            .flexText{
+                border : 10px solid;
+                background-color: hsla(208, 100%, 97%, 0.807);
+                font-size: 1.2em;
+                padding: 1em;
+                width: 40vw;
+                margin-left:2.5vw;
+                margin-right:2.5vw;
+            }
+            #left{
+                opacity: 0;
+                animation: comeFromLeft 2s 3s forwards;
+            }
+            #right{
+                opacity: 0;
+                animation: comeFromRight 2s 5s forwards;
+            }
+            .flexText input{
+                margin-left: 5px;
+                margin-right: 5px;
+            }
+            .flexText input[type="radio"], .flexText input[type="submit"]{
+                cursor: pointer;
+            }
+            .flexText #checkBox{
+                margin-left: 20px;
+            }
+            #submitButtonL, #submitButtonR{
+                margin-top: 0.25em;
+                font-size: 20px;
+                padding: 1em;
+                font-family: DynaPuff, Arial;
+            }
+            /* WHY DO WE NEED DATA ABOUT YOURSELF ? */ 
+            #why{
+                opacity: 0;
+                margin-top: 3vh;
+                width: 50vw;
+                animation: comeFromBottom 2s 7s forwards;
+            }
+            nav #about{
+                border-right:1px solid white;
+            }
+        </style>
+        <script src="js/report.js"></script>
+    </body>
+</html>

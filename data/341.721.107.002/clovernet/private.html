@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="icon" type="image/png" href="assets/favicon.png">
+        <title>CloverNet</title>
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body>
+        <div class="viewport">
+            <h1>Connect to private workspace</h1><br>
+        </div>
+        <div class="viewport">
+            <div id="box">
+                <div class="viewport">
+                    <label>Username : </label>
+                    <input id="user" placeholder="username"><br>
+                </div>
+                <div class="viewport">
+                    <label>Password : </label>
+                    <input id="pass" type="password" placeholder="password"><br><br>
+                </div>
+                <div class="viewport">
+                    <button type="submit" id="btn">Connect</button>
+                </div>
+            </div>
+        </div>
+        <div class="viewport">
+            <p id="message"></p>
+        </div>
+
+        <nav>
+            <ul>
+                <li><a href="about.html" id="about">About</a></li>
+                <li><a href="index.html" id="home">Home</a></li>
+                <li><a href="report.html" id="report">Report Center</a></li>
+            </ul>
+        </nav>
+        <style>
+            h1{
+                margin-top: 5vh;
+                margin-left: 5vw;
+                padding: 10px;
+                display: inline-block;
+                background-color: hsla(208, 100%, 97%, 70%);
+                border-radius: 10px;
+            }
+            #box{
+                margin-top: 5vh;
+                width: 50vw;
+                border: 5px solid black;
+                background-color: hsla(208, 100%, 97%, 50%);
+                border-radius: 10px;
+            }
+            #box label, #box input{
+                margin-top: 30px;
+                margin-bottom: 30px;
+            }
+            #box label{
+                margin-left: 30px;
+                margin-right: 10px;
+                font-size: 30px;
+            }
+            button{
+                margin-top: 30px;
+                margin-bottom: 30px;
+                width: 150px;
+                height: 75px;
+                font-family: DynaPuff, arial;
+                font-size: 20px;
+                box-shadow: 3px 3px 5px;
+            }
+            button:hover{
+                cursor: pointer;
+            }
+
+            p{
+                opacity: 0;
+                background-color: hsla(0, 100%, 55%, 0.547);
+                font-size: 50px;
+                padding: 10px;
+                border-radius: 10px;
+            }
+
+
+            nav #home{
+                border-right:1px solid white;
+                border-left:1px solid white;
+            }
+            /*@Override*/
+            nav li{
+                width:33.33vw;
+                float:left;
+            }
+        </style>
+        <script src="js/private.js"></script>
+    </body>
+</html>
