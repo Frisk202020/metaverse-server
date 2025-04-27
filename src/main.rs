@@ -1,7 +1,6 @@
 use std::{fs::OpenOptions, net::SocketAddr, sync::Arc, io::Write};
-use axum::{routing::{self, get_service}, Router};
+use axum::{routing, Router};
 use tower_http::{cors::{Any, CorsLayer}, services::ServeDir, trace::TraceLayer};
-use tracing::info;
 use tracing_subscriber::FmtSubscriber;
 use util::*;
 use anyhow::Result;
