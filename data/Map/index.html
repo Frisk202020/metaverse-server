@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="/get/Map/favicon.png">
+    <title>Infinite HOME</title>
+    <style>
+        body{
+            background-image: url(/get/Map/bg.jpg);
+            background-repeat: no-repeat;
+            background-position: center;
+            background-attachment: fixed; /* fix the image in the viewport */
+            background-size: cover; /* take the entire space of the bg */
+        }
+        .flex{
+            display: flex;
+            justify-content: center;
+        }
+        .flex img{
+            margin-left: 5vw;
+            margin-right: 5vw;
+            margin-top: 5vh;
+            margin-bottom: 5vh;
+        }
+        .flex p{
+            border: 2px solid white;
+            border-radius: 25px;
+            color:white;
+            width: 100vw;
+            background-color: rgb(15, 15, 54);
+            font-size: 200px;
+        }
+    </style>
+</head>
+<body>
+
+    <div id="doors-container"></div>
+    <script>
+        const container = document.getElementById("doors-container");
+        const doorHTML = `
+            <div class=flex>
+                <img src="/get/Map/gargouille.png">
+                <img src="/get/Map/gargouille.png">
+            </div>
+        `;
+        const doorLeft = `
+            <div class=flex>
+                <img src="/get/Map/gargouilleCorrect.png">
+                <img src="/get/Map/gargouille.png">
+            </div>
+        `;
+        const doorRight = `
+            <div class=flex>
+                <img src="/get/Map/gargouille.png">
+                <img src="/get/Map/gargouilleCorrect.png">
+            </div>
+        `;
+        const floorBeg = `
+            <div class=flex>
+                <p align=center>`;
+        const floorEnd = `
+                </p>
+            </div>`;
+
+        // Générer le HTML pour 100 portes
+        let doorsHTML = doorRight;
+        for (let i = 2; i < 101; i++) {
+            if (i == 69){
+                doorsHTML += doorRight;
+            }
+            else if (i == 13 || i == 56 || i == 89){
+                doorsHTML += doorLeft;
+            }
+            else if (i%10 == 0 && i != 0){
+                doorsHTML = doorsHTML + doorHTML + floorBeg + i.toString() + floorEnd;
+            }
+            else{
+                doorsHTML += doorHTML;
+            }   
+        }
+        
+
+        // Insérer le HTML dans le conteneur
+        container.innerHTML = doorsHTML;
+    </script>
+</body>
+</html>

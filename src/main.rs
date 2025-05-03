@@ -1,10 +1,9 @@
 use std::{fs::OpenOptions, net::SocketAddr, sync::Arc, io::Write};
 use axum::{routing, Router};
-use tower_http::{cors::{Any, CorsLayer}, services::ServeDir, trace::TraceLayer};
+use tower_http::{cors::{Any, CorsLayer}, trace::TraceLayer};
 use tracing_subscriber::FmtSubscriber;
 use util::*;
 use anyhow::Result;
-use tower::ServiceBuilder;
 
 mod util;
 mod file;
@@ -16,24 +15,26 @@ async fn main() -> Result<()> {
     tracing::subscriber::set_global_default(subscriber).expect("setting default subscriber failed");
 
     let state = Arc::new(AppState {});
-    let mut socket = "0.0.0.0:10000".parse::<SocketAddr>()?; // put port 0 for random port
+    let mut socket = "0.0.0.0:10000".parse::<SocketAddr>()?; 
+    // let mut socket = "127.0.0.1:39751".parse::<SocketAddr>()?;
     let listener = tokio::net::TcpListener::bind(socket).await?;
     socket = listener.local_addr()?;
+    println!("{socket}");
 
     let cors = CorsLayer::new()
         .allow_origin(Any)
         .allow_methods(Any)
         .allow_headers(Any);
 
-    let traced_service = ServiceBuilder::new()
-        .layer(TraceLayer::new_for_http())
-        .service(ServeDir::new("data/341.721.107.002/clovernet"));
-
     let router = Router::new()
-        .route("/download/{ip}", routing::get(download))
+        .route("/write", routing::post(write_archives))
         .route("/read", routing::get(read))
         .route("/get/{computer}/{*file}", routing::get(get_file))
-        .nest_service("/get_html/341.721.107.002/CloverNet.html", traced_service)
+        .route("/download/{ip}", routing::post(download))
+        .route("/reset", routing::post(reset))
+        .nest_service("/get_html/341.721.107.002/CloverNet.html", traced_service("341.721.107.002/clovernet"))
+        .nest_service("/get_html/Home/H0PE_mail.html", traced_service("Home/H0PE_mail.html"))
+        .nest_service("/get_html/Home/map.html", traced_service("Map"))
         .layer(cors)
         .layer(TraceLayer::new_for_http())
         .with_state(state);
