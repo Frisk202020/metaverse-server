@@ -15,11 +15,10 @@ async fn main() -> Result<()> {
     tracing::subscriber::set_global_default(subscriber).expect("setting default subscriber failed");
 
     let state = Arc::new(AppState {});
-    let mut socket = "0.0.0.0:10000".parse::<SocketAddr>()?; 
-    // let mut socket = "127.0.0.1:39751".parse::<SocketAddr>()?;
+    // let mut socket = "0.0.0.0:10000".parse::<SocketAddr>()?; 
+    let mut socket = "127.0.0.1:39751".parse::<SocketAddr>()?;
     let listener = tokio::net::TcpListener::bind(socket).await?;
     socket = listener.local_addr()?;
-    println!("{socket}");
 
     let cors = CorsLayer::new()
         .allow_origin(Any)
